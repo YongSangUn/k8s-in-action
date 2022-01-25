@@ -1,0 +1,21 @@
+# port
+kind: Pod
+spec:
+  containers:
+  - name: web
+    ports:
+    - name: http
+      containerPort: 8080 # The name of port-8080 is http
+    - name: https
+      containerPort: 8443 # The name of port-8443 is https
+
+# service 
+kind: Service
+spec:
+  ports:
+  - name: http
+    port: 80
+    targetPort: http  # Port 80 maps to a port named http
+  - name: https
+    port: 443
+    targetPort: https # Port 443 maps to a port named https

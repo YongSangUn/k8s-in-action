@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-loadbalancer
+spec:
+  # Services using the local external traffic policy may 
+  # result in unbalanced load distribution across pods
+  externalTrafficPolicy: Local
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: web
