@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-liveness
+spec:
+  containers:
+  - image: ibo6m/nginx_web
+    name: web
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8080
