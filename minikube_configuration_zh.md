@@ -49,7 +49,7 @@ alias kubectl="minikube kubectl --"   # Use minikube's built-in kubectl
 alias k='kubectl'
 alias mk='minikube'   # or (win)minikube.exe(Need to replace kubectl of docker-desktop)
 
-#Quickly switch the default namespace
+# Quickly switch the default namespace
 alias kcd='kubectl config set-context $(kubectl config current-context) --namespace '
 
 # Completions
