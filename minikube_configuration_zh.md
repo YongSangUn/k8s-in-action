@@ -8,7 +8,7 @@
 
 Find the branch of the latest version of ali-minikube,
 <https://github.com/AliyunContainerService/minikube/tree/aliyun-v1.23.1>
-replace the version in the URL of <https://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/iso/mi    nikube-v1.23.1.iso> to different  versions.
+replace the version in the URL of <https://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/iso/minikube-v1.23.1.iso> to different  versions.
 
 - How to start:
 
