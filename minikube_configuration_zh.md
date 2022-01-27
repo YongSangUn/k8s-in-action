@@ -22,11 +22,13 @@ minikube start --image-mirror-country cn \
 - Configure wsl2
 
 ```powershell
+# powershell cli:
+
 @"
 [wsl2]
 memory=6GB
 processors=4
-"@ | out-file $home\.wslconfig -coding utf8
+"@ | out-file $home\.wslconfig -encoding utf8
 ```
 
 You can now use minikube to enable ingress.
