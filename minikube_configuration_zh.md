@@ -13,10 +13,22 @@ replace the version in the URL of <https://kubernetes.oss-cn-hangzhou.aliyuncs.c
 - How to start:
 
 ```bash
+# minikube version v1.25.1
+minikube start \
+  --image-mirror-country=cn \
+  --registry-mirror=https://s2hzwmw6.mirror.aliyuncs.com,https://registry.docker-cn.com \
+  --embed-certs=true \
+  --memory=4096
+
+# --image-mirror-country=cn \
+# --image-repository=registry.cn-hangzhou.aliyuncs.com/google_containers \
+
+# minikube version v1.24.0
 minikube start --image-mirror-country cn \
-    --registry-mirror=https://s2hzwmw6.mirror.aliyuncs.com \
-    --iso-url=https://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/iso/minikube-v1.23.1.iso \
-    --memory=4096
+  --registry-mirror=https://s2hzwmw6.mirror.aliyuncs.com \
+  --iso-url=https://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/iso/minikube-v1.23.1.iso \
+  --embed-certs=true \
+  --memory=4096
 ```
 
 - Configure wsl2
