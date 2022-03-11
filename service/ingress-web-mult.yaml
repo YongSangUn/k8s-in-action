@@ -1,0 +1,38 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: web
+spec:
+  defaultBackend:
+    service:
+      name: nginx
+      port:
+        number: 80
+  rules:
+    - host: web.example.com
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: web-nodeport
+              port:
+                number: 80
+        - path: /foo
+          pathType: Prefix
+          backend:
+            service:
+              name: test
+              port:
+                number: 80
+    - host: bar.example.com
+      http:
+        paths:
+        - path: /bar
+          pathType: Prefix
+          backend:
+            service:
+              name: bar-nodeport
+              port:
+                number: 80
