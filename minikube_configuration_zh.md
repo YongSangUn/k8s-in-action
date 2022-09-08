@@ -31,6 +31,15 @@ minikube start --image-mirror-country cn \
   --memory=4096
 ```
 
+# Failed to pull coredns
+
+```bash
+docker pull coredns/coredns:1.8.6
+docker tag coredns/coredns:1.8.6 registry.cn-hangzhou.aliyuncs.com/google_containers/coredns:v1.8.6
+docker rmi coredns/coredns:1.8.6
+minikube image load registry.cn-hangzhou.aliyuncs.com/google_containers/coredns:v1.8.6
+```
+
 - Configure wsl2
 
 ```powershell
